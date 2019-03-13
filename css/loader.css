@@ -7,6 +7,8 @@
     --stroke: lawngreen;                  /* Change this to change the color of the loader */
     --stroke-width: 3;                    /* Change this to change the thickness of the loader */
     --percent-font-size: calc(1vw + 1vh); /* Change this to change the size of the fonts */
+    --fill-color: black;                  /* Change this to change the fill of the loader */
+    --fill-opacity: 0;                    /* Change this to change the opacity of the fill for the loader */
 }
 
 #animated-loader {
@@ -20,6 +22,8 @@
 #animated-loader #progress {
     stroke: var(--stroke);
     stroke-width: var(--stroke-width);
+    fill: var(--fill-color);
+    fill-opacity: var(--fill-opacity);
     background-color: cyan;
     z-index: 0;
     stroke-dasharray: 315;

@@ -1,0 +1,49 @@
+/* -----------------------------------------------
+/* Author : Justin Yau - justinyau.me
+/* ----------------------------------------------- */
+
+:root {
+    --width: calc(12.5vw + 12.5vh);       /* Change this to change the size of the whole loader  */
+    --stroke: lawngreen;                  /* Change this to change the color of the loader */
+    --stroke-width: 3;                    /* Change this to change the thickness of the loader */
+    --percent-font-size: calc(1vw + 1vh); /* Change this to change the size of the fonts */
+}
+
+#animated-loader {
+    position: absolute;
+    top: calc((100vh - var(--width))/2);
+    left: calc((100vw - var(--width))/2);
+    width: var(--width);
+    height: var(--width);
+}
+
+#animated-loader #progress {
+    stroke: var(--stroke);
+    stroke-width: var(--stroke-width);
+    background-color: cyan;
+    z-index: 0;
+    stroke-dasharray: 315;
+}
+
+#animated-loader #al-percentage {
+    position: absolute;
+    z-index: 2;
+    font-size: var(--percent-font-size);
+    top: 45%;
+    left: 47%;
+}
+
+#animated-loader #al-img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#credit {
+    position: absolute;
+    text-align: center;
+    font-size: calc(var(--percent-font-size) * .1);
+    bottom: 0;
+}
